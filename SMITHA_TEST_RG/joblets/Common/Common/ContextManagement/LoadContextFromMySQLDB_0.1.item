@@ -14,7 +14,7 @@
       <contextParameter comment="Environment parameter that can be leveraged to drive different logic based on execution environment" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value=""/>
       <contextParameter comment="Flag to set to load context variables in Job.  This is handy if there are child jobs and we do not want child jobs to load the context values again, but instead use the values from the parent job. Default Value is true and then overridden to false at the end of the first context load" name="loadContextInJob" prompt="loadContextInJob?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="true"/>
       <contextParameter comment="Print Context Variable Values (Password always hidden by default)" name="printContextVariableValues" prompt="printContextVariableValues?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="false"/>
-      <contextParameter comment="Location of Context Files (Local or Cloud Engine or Remote Engine)" name="resource_directory_contextFiles" prompt="resource_directory_contextFiles?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value="C:/Talend/contextmanagement"/>
+      <contextParameter comment="Location of Context Files (Local or Cloud Engine or Remote Engine)" name="resource_directory_contextFiles" prompt="resource_directory_contextFiles?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value="/opt/talend/contextmanagement"/>
       <contextParameter comment="Task Name or Id for loading Context File" name="taskName" prompt="taskName?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value=""/>
       <contextParameter comment="Allocate the directory path to hold temporary file for tMap disk mode" name="temp_dir_path" prompt="temp_dir_path?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value=""/>
     </context>
@@ -65,9 +65,6 @@
       <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
       <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;C:/Talend/SolutionCenter/DI/Studio-7.1.1/workspace/in.csv&quot;"/>
       <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-      <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
-      <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
-      <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
       <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
       <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_12"/>
       <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +77,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:XCRJNDdjNoTRlYpCnMX7m1qEENJpeyjs2wLptrie"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:WHmLE5P87lqzPAdOS63SU6XOoob99VkMktHrGX1w"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -111,11 +108,6 @@
       <routinesParameter id="_BDCxYILxEemspZd918cdoQ" name="TalendStringUtil"/>
       <routinesParameter id="_BC-f8ILxEemspZd918cdoQ" name="TalendString"/>
       <routinesParameter id="_oGip0IyvEemuGIWPULx7VA" name="TalendEncryption"/>
-      <routinesParameter id="_IiFLMKsdEeqivql5oRt-ag" name="DataQuality"/>
-      <routinesParameter id="_IiPjQKsdEeqivql5oRt-ag" name="DQTechnical"/>
-      <routinesParameter id="_Ih92cKsdEeqivql5oRt-ag" name="DataMasking"/>
-      <routinesParameter id="_IiIOgKsdEeqivql5oRt-ag" name="DataQualityDependencies"/>
-      <routinesParameter id="_IiL44KsdEeqivql5oRt-ag" name="DqStringHandling"/>
     </parameters>
     <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
@@ -199,7 +191,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Q3Qwb83zt3TlZ92+dvzyyRvM2l+SqHaVCVB9cCw0"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:H7mTws0cDZ4enhgn9iBOqriEEFMy3I0wBcwt/eZm"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Context_Global&quot;"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -248,7 +240,7 @@
         <column key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties/>
+        <uiProperties shellMaximized="true"/>
         <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="LoadGlobalContext" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="GlobalContext.contextkey " name="key" nullable="true" type="id_String"/>
@@ -285,7 +277,7 @@
       <elementParameter field="TEXT" name="DBNAME" value="context.globalContext_DB_Database_Schema"/>
       <elementParameter field="TEXT" name="PROPERTIES" value="context.globalContext_DB__AdditionalParams"/>
       <elementParameter field="TEXT" name="USER" value="context.globalContext_DB_Username"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SfCXYr0uDDzbw5czB9AjJRDtvIZrwy9IWg9+GewPrRKhVnLlC1EBjyHT9+kW+5z/0Eky/1ilAwYq5yZdeQ=="/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:UYXEspS6lC+2DTVShjHiuuj8g1CV+m9kcAXNacZmTaxRfgJjRNYwXCehTynLde+vPHdb5hZyDzNWEmeBmw=="/>
       <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
       <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
       <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -307,7 +299,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:mYpfIrU599C4oqyStuXNz9w5Vehqw7EdTw0Akvhq"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:pHvvTJz5nxAMH76Qs1KYNXJflksz2qR6Win7pQrM"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Context_&quot; + projectName"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -356,7 +348,7 @@
         <column key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties/>
+        <uiProperties shellMaximized="true"/>
         <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="LoadProjectContext" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="ProjectContext.contextkey " name="key" nullable="true" type="id_String"/>
@@ -394,7 +386,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:w3Q4fmF0lkXjjjfgBkjQj6gdRaVDjNcWWqwHf8Tv"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:4dV9JrtXbfkNE7MobyRsOxf5r3V2pSQBb3pjIj+1"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Context_&quot; + projectName + &quot;_&quot; + jobName"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -443,7 +435,7 @@
         <column key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties/>
+        <uiProperties shellMaximized="true"/>
         <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="LoadJobContext" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="JobContext.contextkey " name="key" nullable="true" type="id_String"/>
@@ -481,7 +473,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/Evww5M/SrnRhKox4nIhRF17+oeoBKsc3y+7MEYP"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:r6IJFs6lQUC1k6pi9WrW47SoUfyldhOri/T2IyvU"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Context_&quot; + projectName + &quot;_&quot; + jobName + &quot;_&quot; + context.taskName"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -530,7 +522,7 @@
         <column key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties/>
+        <uiProperties shellMaximized="true"/>
         <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="LoadTaskContext" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="TaskContext.contextkey " name="key" nullable="true" type="id_String"/>
@@ -926,13 +918,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_de0c6816-965b-4d3c-a63a-87d9f8b57937"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FAjcCEo5y0IEsJWJalGSk+/9VVYZgQyjJ51HgbLPXLelNEaxVBke2vazWXIaqR4SJDjl34yTVSRu
-Y76Ss2yArA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_78ccc961-7a94-44cc-a46c-46e0b3d153c2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dISZUH3hpGzM4RJcUIGZiMpN+00yamte2tF46+b2tXD8LIP0m9aDITDb8kbzBKkC2tnqQ/9pmBpO
-MWQR9UiP0A==</DigestValue></Reference></SignedInfo><SignatureValue>UOWzgGJ5eTIf1drwsepeCaCw0pS+68xywkUU6CPPgkseuwwQXO3JnjfFAgXzXXyqpcYyTlebtgRl
-C9GGZ0ni3lSXWRW/aCdK+wAKxCTgj2IIA0uyfQVDWVsVe2xDhOthOOsyl6SjZm+Sd9kWbOyscurX
-S0i17ATC19Fm4Xgv8cXt+vnWqNJ/VIKYyN/J7Ok5LUZsoV/oSXVzigpqNRxzxz3JQOJ39PaVc7cd
-MWKHiz/A40eZLSfPTCTaWu3ABuJWzhVDXSi5vq5+hJdpt80sJoJzw6ptx+PhZGZUBzEbpf5BPSK+
-waVkYoEUvqsH+Ezi9S4TcsiF3hwTlU3/dAniwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cc92c7a9-fee2-4c7d-8be2-de051ea677d0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gg3mDASCHfRy48siA0T8wP+q0ezIZ6JJrTB46Dvepww4jkrUqoAzkA6fQ+AHlVvZ9ThH6Wzduqxf
+Q9PxMOk4gA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0b88a80d-7d99-451f-9ed6-4139a2b24a79"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a5uMlG34/D7pkA60cUGdnPf4TPvRFHlK60GkvGyhNlrfzpH8Q7rnXZftZR/xKlKClkqEB6Ah/yV6
+7m4/+nJrag==</DigestValue></Reference></SignedInfo><SignatureValue>kLT7L5F300yFKGg5y7L0XeH2ShVKGxH8AG/xeSORt/iYU+ap2uO4sfyDQpjPO93OIaE9nZdQ8fWI
+bECYv3J+WFON9Ac4WmsjvtqGVbAkeklaEDiP6hrvw5L0FFiSuHes04BFsWV9OhQrVBRjDm2n5ych
+CHyPI0E08rus4KS8GyfVRcMrB7hI1QxtgJDlrbf5hN45s+hrpP8ytOfyQe/JoZyEZ4x8VLKuKTVJ
+nX7YkbJv+OrhKLQW3VRGZgrf8BptmEG1MWC7IW583tdPr7mNBKADMiV/tmKjft8pEVZT5SAlKNUg
+x07K8aAheoUNBMQezEtgO2/H5MRLDeohLPmrMw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -954,4 +946,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_78ccc961-7a94-44cc-a46c-46e0b3d153c2" Target="#_de0c6816-965b-4d3c-a63a-87d9f8b57937"><Timestamp>2020-08-25 12:35:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0b88a80d-7d99-451f-9ed6-4139a2b24a79" Target="#_cc92c7a9-fee2-4c7d-8be2-de051ea677d0"><Timestamp>2020-08-25 13:53:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

@@ -18,6 +18,11 @@
     <module>jobs/joblets/Common/ContextManagement/loadcontextfromfile_0.1</module>
     <module>jobs/process/Snowflake_Template/load_snowflake_dw_0.1</module>
     <module>jobs/process/Snowflake_Template/load_snowflake_scd_0.1</module>
+    <module>jobs/joblets/Common/Common/ContextManagement/printcontexttolog_0.1</module>
+    <module>jobs/process/Common/ContextManagement/encryptvalue_contextvariable_0.1</module>
+    <module>jobs/joblets/Common/Common/ContextManagement/loadcontextfrommysqldb_0.1</module>
+    <module>jobs/joblets/Common/Common/ContextManagement/loadcontextfromfile_0.1</module>
+    <module>jobs/process/Common/ContextManagement/loadcontext_testjob_0.1</module>
   </modules>
   <properties>
     <signer.version>7.3.1</signer.version>

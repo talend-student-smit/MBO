@@ -13,7 +13,6 @@ public class TalendEncryption {
 	private static String defaultSeed = "defaultsecretpassword";
 	private static StandardPBEByteEncryptor  encryptor;
 	private static String seed;
-	private static String encryptionFilePath;
 	
 	/**
      * Initialise the TalendEncryption Jasypt encryptor key.
@@ -29,32 +28,27 @@ public class TalendEncryption {
      *
      * {example} initialize("/opt/talend/encryption.properties") #
      */
-	public static void initialize(String filepath) throws Exception{
-		//only reinitialize if the path changes
-		//System.out.println("filepath: "+filepath);
-		if (encryptor == null || !filepath.equals(encryptionFilePath)){
-			encryptor = new StandardPBEByteEncryptor();
-			encryptor.setAlgorithm("PBEWithMD5AndTripleDES");
-			try {
-				File file = new File(filepath);
-				FileInputStream fileInput = new FileInputStream(file);
-				
-				
-				Properties properties = new Properties();
-				properties.load(fileInput);
-				fileInput.close();
-				
-				seed = new StringBuilder(properties.getProperty("Secret")).toString();//.reverse().toString();
-				//System.out.println("Seed: "+seed.toString());
-				encryptor.setPassword(seed);
-				encryptionFilePath = filepath;
-			} catch (Exception e){
-				encryptor.setPassword(defaultSeed);
-				//System.out.println("defaultSeed: "+defaultSeed.toString());
-				//fail if file is not found
-				throw e;
-			}
-		}
+	public static void initialize(String filepath) throws Exception{	
+		encryptor = new StandardPBEByteEncryptor();
+		encryptor.setAlgorithm("PBEWithMD5AndTripleDES");
+		
+		try {
+			File file = new File(filepath);
+			FileInputStream fileInput = new FileInputStream(file);
+			
+			
+			Properties properties = new Properties();
+			properties.load(fileInput);
+			fileInput.close();
+			
+			seed = new StringBuilder(properties.getProperty("Secret")).toString();//.reverse().toString();
+			
+			encryptor.setPassword(seed);
+			
+		} catch (Exception e){
+			encryptor.setPassword(defaultSeed);
+			//throw e;
+		}		
 	}
 
 	 /**
@@ -62,10 +56,9 @@ public class TalendEncryption {
      *
      * {talendTypes} String | String
      *
-     * {Category} TalendEncryption
+     * {Category} StringHandling
      *
      * {param} String value: String value
-     * {param} string("/opt/talend/encryption.properties") filepath : properties file to load
      *
      * {example} secretpassword=ENC(x1387yx=)
      *
@@ -82,10 +75,9 @@ public class TalendEncryption {
      *
      * {talendTypes} String | String
      *
-     * {Category} TalendEncryption
+     * {Category} StringHandling
      *
      * {param} String value: String value
-     * {param} string("/opt/talend/encryption.properties") filepath : properties file to load
      *
      * {example} ENC(x1387yx=):secretpassword
      *
