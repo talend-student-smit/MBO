@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns="http://www.talend.org/dbmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="String to specify any additional JDBC Connection parameters" name="globalContext_DB__AdditionalParams" prompt="globalContext_DB__AdditionalParams?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Database schema" name="globalContext_DB_Database_Schema" prompt="globalContext_DB_Database_Schema?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Database Hostname" name="globalContext_DB_Host" prompt="globalContext_DB_Host?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Database Password" name="globalContext_DB_Password" prompt="globalContext_DB_Password?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Password" value=""/>
-    <contextParameter comment="Port for connecting Database " name="globalContext_DB_Port" prompt="globalContext_DB_Port?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Database username" name="globalContext_DB_Username" prompt="globalContext_DB_Username?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Context Storage Type to read from (File or DB)." name="contextStorageType" prompt="contextStorageType?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value="&quot;File&quot;"/>
-    <contextParameter comment="Load Job Level Context File" name="enableJobLevelContextFileLoad" prompt="enableJobLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="false"/>
-    <contextParameter comment="Load Project Level Context File" name="enableProjectLevelContextFileLoad" prompt="enableProjectLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="false"/>
-    <contextParameter comment="Load Task Level Context File" name="enableTaskLevelContextFileLoad" prompt="enableTaskLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="false"/>
-    <contextParameter comment="Environment parameter that can be leveraged to drive different logic based on execution environment" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Flag to set to load context variables in Job.  This is handy if there are child jobs and we do not want child jobs to load the context values again, but instead use the values from the parent job. Default Value is true and then overridden to false at the end of the first context load" name="loadContextInJob" prompt="loadContextInJob?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="true"/>
-    <contextParameter comment="Print Context Variable Values (Password always hidden by default)" name="printContextVariableValues" prompt="printContextVariableValues?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="true"/>
-    <contextParameter comment="Location of Context Files (Local or Cloud Engine or Remote Engine)" name="resource_directory_contextFiles" prompt="resource_directory_contextFiles?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value="C:/Talend/contextmanagement"/>
-    <contextParameter comment="Task Name or Id for loading Context File" name="taskName" prompt="taskName?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
-    <contextParameter comment="Allocate the directory path to hold temporary file for tMap disk mode" name="temp_dir_path" prompt="temp_dir_path?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
     <contextParameter comment="" name="MySql_Connection_AdditionalParams" prompt="MySql_Connection_AdditionalParams?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
     <contextParameter comment="" name="MySql_Connection_Database" prompt="MySql_Connection_Database?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
     <contextParameter comment="" name="MySql_Connection_Login" prompt="MySql_Connection_Login?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
     <contextParameter comment="" name="MySql_Connection_Password" prompt="MySql_Connection_Password?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_Password" value=""/>
     <contextParameter comment="" name="MySql_Connection_Port" prompt="MySql_Connection_Port?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
     <contextParameter comment="" name="MySql_Connection_Server" prompt="MySql_Connection_Server?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
+    <contextParameter comment="String to specify any additional JDBC Connection parameters" name="globalContext_DB__AdditionalParams" prompt="globalContext_DB__AdditionalParams?" promptNeeded="false" repositoryContextId="_1bwl8IX1Eem4I64wW9I-Og" type="id_String" value=""/>
+    <contextParameter comment="Database schema" name="globalContext_DB_Database_Schema" prompt="globalContext_DB_Database_Schema?" promptNeeded="false" repositoryContextId="_1bwl8IX1Eem4I64wW9I-Og" type="id_String" value=""/>
+    <contextParameter comment="Database Hostname" name="globalContext_DB_Host" prompt="globalContext_DB_Host?" promptNeeded="false" repositoryContextId="_1bwl8IX1Eem4I64wW9I-Og" type="id_String" value=""/>
+    <contextParameter comment="Database Password" name="globalContext_DB_Password" prompt="globalContext_DB_Password?" promptNeeded="false" repositoryContextId="_1bwl8IX1Eem4I64wW9I-Og" type="id_Password" value=""/>
+    <contextParameter comment="Port for connecting Database " name="globalContext_DB_Port" prompt="globalContext_DB_Port?" promptNeeded="false" repositoryContextId="_1bwl8IX1Eem4I64wW9I-Og" type="id_String" value=""/>
+    <contextParameter comment="Database username" name="globalContext_DB_Username" prompt="globalContext_DB_Username?" promptNeeded="false" repositoryContextId="_1bwl8IX1Eem4I64wW9I-Og" type="id_String" value=""/>
+    <contextParameter comment="Context Storage Type to read from (File or DB)." name="contextStorageType" prompt="contextStorageType?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value="&quot;File&quot;"/>
+    <contextParameter comment="Load Job Level Context File" name="enableJobLevelContextFileLoad" prompt="enableJobLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Load Project Level Context File" name="enableProjectLevelContextFileLoad" prompt="enableProjectLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Load Task Level Context File" name="enableTaskLevelContextFileLoad" prompt="enableTaskLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Environment parameter that can be leveraged to drive different logic based on execution environment" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Flag to set to load context variables in Job.  This is handy if there are child jobs and we do not want child jobs to load the context values again, but instead use the values from the parent job. Default Value is true and then overridden to false at the end of the first context load" name="loadContextInJob" prompt="loadContextInJob?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="true"/>
+    <contextParameter comment="Print Context Variable Values (Password always hidden by default)" name="printContextVariableValues" prompt="printContextVariableValues?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Location of Context Files (Local or Cloud Engine or Remote Engine)" name="resource_directory_contextFiles" prompt="resource_directory_contextFiles?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value="/opt/talend/contextmanagement"/>
+    <contextParameter comment="Task Name or Id for loading Context File" name="taskName" prompt="taskName?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Allocate the directory path to hold temporary file for tMap disk mode" name="temp_dir_path" prompt="temp_dir_path?" promptNeeded="false" repositoryContextId="_KWbrgIL1EemhiP054CDFZw" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -65,7 +65,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:b1lV3kee+MPwVxJ7+AWAgtwyADIpSkewytMEAD/j"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:2HkPFACzATCCRWJ3f1Hna5ahGlMmUr9KZLBEsC2c"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -100,7 +100,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:inFpp1mh/tzT2+obgrJ1POiZBFUS4biEsvmxdB8n"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:UYP/DXABO17A8zXPzUmLj1k+clTwjO+HqJ3E5coX"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -141,7 +141,7 @@
     <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Indicates Start of Job"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connection to MySQL Failed!&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="6702"/>
@@ -151,7 +151,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="352">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="-50" offsetLabelY="4" posX="576" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;MySQL Connection Succesful&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="3702"/>
@@ -165,13 +165,13 @@
     <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;PostJob"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="LoadContext" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="32">
+  <node componentName="LoadContext" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="LoadContext_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
     <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
     <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tPrejob_1"/>
@@ -203,7 +203,7 @@
     <elementParameter field="TEXT" name="PORT" value="context.MySql_Connection_Port"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.MySql_Connection_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.MySql_Connection_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SZwxURp9zPm6gYZY1CympmYVQoXe8qAzu+qESH1hjt46JqXYHb5gpPyH96rFVSTzT01RCvMW7/GBmXz+CQ=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:+XgZbUlgF+kWmfzN0U8lCg0gEYwksXHCVW5AEKxpwuKCjeZ4bhnN3v30vGePs+573comDhxgvHdkBRImfA=="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
@@ -303,7 +303,7 @@
     <elementParameter field="TEXT" name="PORT" value="context.MySql_Connection_Port"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.MySql_Connection_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.MySql_Connection_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:b9ViNkMHVARLhF0BRxWFmXQEjn1ksx0MnJYXlgLgY9otcFwheHzyZ84HG3/IbQJXIdbautSeHMhtQqFm7Q=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uJeoVrwisgFLAwo7Ih81Bd8384Ry4L2KlhVMwCy6lM1ecOsrJS3zYC4cQQt90ql9wHNG1ED5dHh60NI4wA=="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
@@ -511,7 +511,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ"/>
@@ -522,7 +522,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MySql_Connection_Database"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.MySql_Connection_AdditionalParams"/>
     <elementParameter field="TEXT" name="USER" value="context.MySql_Connection_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:e1X5XWKo8W41JoCLsiUgJj9Cnen4tlySGSQYv0oQPlL1tEP5XfQcHupRpKh9EJbyv/Lozg6wkgK0FcLa4w=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:UedU1HF/ZL/I60QJAvAK3WgAWSI3+O9sW0xJ0PyglMAYWIc7wn/C5xP36A0HzIO4JaXMzw7f9HKsYe2NRw=="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -534,14 +534,29 @@
     <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Connect to MySQL Database"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="LoadContext_1">
+  <node componentName="LoadContext" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="LoadContext_2"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tPrejob_1"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_2" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_2:COMPONENT_LIST" value=""/>
+    <elementParameter field="TEXT" name="LABEL" value="LoadContext"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="LoadContext_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBClose_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk4"/>
-  </connection>
-  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (&lt;b&gt;TRIGGER_OUTPUT_1&lt;/b&gt;&lt;br&gt;OnSubjobOk(TRIGGER_OUTPUT_1))" lineStyle="1" metaname="LoadContext_1" offsetLabelX="48" offsetLabelY="-15" source="LoadContext_1" target="tDBConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="-5" offsetLabelY="-17" outputId="1" source="tParallelize_1" target="tELTMysqlMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
@@ -575,6 +590,9 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tWarn_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (&lt;b&gt;TRIGGER_OUTPUT_1&lt;/b&gt;&lt;br&gt;OnSubjobOk(TRIGGER_OUTPUT_1))" lineStyle="1" metaname="LoadContext_2" offsetLabelX="48" offsetLabelY="-15" source="LoadContext_2" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <note opaque="true" posX="96" posY="-160" sizeHeight="129" sizeWidth="801" text="Version: 1.0&#13;&#10;Description:&#13;&#10;&#13;&#10;Job for deomonstrating ELTMySql components . Use case described against the jobs&#13;&#10;">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -643,13 +661,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c96e8824-62ad-413e-bdb6-7e11d858eb8e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nB7flgCQEbOPuKO0tYBoFODaxvhNeR2Qk6iwWTXpyAn03QYezh4SrfctRBRtFLO6OiM/W7jC5xUA
-emN6igRHBQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0ff41cf7-5734-4572-a0f8-3f89a193d2d9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cTKFlCaKAm4s4bNCA6Lg6rNg4YTVPNdnmNAf5spdVFn0t4PYpb9yjSo+FLqAqwsUVUTuu1sO+F6q
-F7ZDo80wng==</DigestValue></Reference></SignedInfo><SignatureValue>ISxmsHyZZ4MLby/3kzPkVPlU6m+Dq49QrZ9U7FDeV2jR7faU3f7UioKQMVTMhqGmSzOLzRpZl/F7
-uMLS94R6E7wC7UIlihIWHvdzbw20bDLLJeYz6CjLbmOKYVwrNj9mqBJF86PvQM8poCG7UWysTO0B
-dUDYT5IrvKDTABIBbowVdeUoQZzFT0oY5QHPqo3VIaWmgpBmWJp1p/rzzcFitzVR+5rpGrGrOxzW
-wDOvPAY/R56Ta4/GNPX9wVwph/sILMyZFc5H7szBlp+Wec1Pqp4Q9dDzQ6iQFW+qtYksRGROAI04
-RPPp44fMZ9TqrMVXuRBMLPfY1uQr1mb3t7F80Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="LoadContext_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9a24ed94-377a-4fef-83b5-5bf160b02c3e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ae/iE/vK2tpBr4kXJ3Tqp1CaAXW/sAuk/wVTrbHZxGbfp2Kc7atSjnq5MkUsHIMGAZHacdhcDLP+
+WG/0YOGFwg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cbec9483-e9e1-4fee-aaee-3cab19813de3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/bzra10aqA1rVoPZtu0MjXdsr5ZHNOTgB3eWb0cfr4Qmfn0yc6rl2AtgRDtCHKFl4OsyLgxERHv5
+as85XEM9VQ==</DigestValue></Reference></SignedInfo><SignatureValue>Do1bOYajSGv8sk0Mj3dGAaKL0N2Sc/9fKs+rNf8H2TDYgWjpCoQCK+NTGYwBwNvzWxniGmiQ5X7Y
+xn/2WOWPh1RwFDiwRhW6scL54xhUUx2t+HuKdNwIBfbgCYIDfLy2Q7KgYz0LEVLW8609Togg5LT3
+KdMzAhetl/u1acyZhwsrUCUzaf+G2/bsbxlCuWvf56jLLd3galyjiIr0IdodjsZE0tAYh13yhC4Q
+rFWJ06wvVcJjWcUnpGNpjyG72PWLfmwonP9nwn3z7nmi3PiF+APuLYrUApOtbFz8hTwJkT2En3UP
+kX26686XktIjA72is3MC/09mv3djGkvbwDo5OA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -671,4 +694,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0ff41cf7-5734-4572-a0f8-3f89a193d2d9" Target="#_c96e8824-62ad-413e-bdb6-7e11d858eb8e"><Timestamp>2020-08-25 12:35:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cbec9483-e9e1-4fee-aaee-3cab19813de3" Target="#_9a24ed94-377a-4fef-83b5-5bf160b02c3e"><Timestamp>2020-08-25 13:56:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
