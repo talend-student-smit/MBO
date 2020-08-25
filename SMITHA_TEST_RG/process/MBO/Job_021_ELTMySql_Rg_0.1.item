@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns="http://www.talend.org/dbmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="String to specify any additional JDBC Connection parameters" name="globalContext_DB__AdditionalParams" prompt="globalContext_DB__AdditionalParams?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Database schema" name="globalContext_DB_Database_Schema" prompt="globalContext_DB_Database_Schema?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Database Hostname" name="globalContext_DB_Host" prompt="globalContext_DB_Host?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Database Password" name="globalContext_DB_Password" prompt="globalContext_DB_Password?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Password" value=""/>
+    <contextParameter comment="Port for connecting Database " name="globalContext_DB_Port" prompt="globalContext_DB_Port?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Database username" name="globalContext_DB_Username" prompt="globalContext_DB_Username?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Context Storage Type to read from (File or DB)." name="contextStorageType" prompt="contextStorageType?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value="&quot;File&quot;"/>
+    <contextParameter comment="Load Job Level Context File" name="enableJobLevelContextFileLoad" prompt="enableJobLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Load Project Level Context File" name="enableProjectLevelContextFileLoad" prompt="enableProjectLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Load Task Level Context File" name="enableTaskLevelContextFileLoad" prompt="enableTaskLevelContextFileLoad?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="false"/>
+    <contextParameter comment="Environment parameter that can be leveraged to drive different logic based on execution environment" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Flag to set to load context variables in Job.  This is handy if there are child jobs and we do not want child jobs to load the context values again, but instead use the values from the parent job. Default Value is true and then overridden to false at the end of the first context load" name="loadContextInJob" prompt="loadContextInJob?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="true"/>
+    <contextParameter comment="Print Context Variable Values (Password always hidden by default)" name="printContextVariableValues" prompt="printContextVariableValues?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_Boolean" value="true"/>
+    <contextParameter comment="Location of Context Files (Local or Cloud Engine or Remote Engine)" name="resource_directory_contextFiles" prompt="resource_directory_contextFiles?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value="C:/Talend/contextmanagement"/>
+    <contextParameter comment="Task Name or Id for loading Context File" name="taskName" prompt="taskName?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="Allocate the directory path to hold temporary file for tMap disk mode" name="temp_dir_path" prompt="temp_dir_path?" promptNeeded="false" repositoryContextId="_-7yUgILxEemhiP054CDFZw" type="id_String" value=""/>
+    <contextParameter comment="" name="MySql_Connection_AdditionalParams" prompt="MySql_Connection_AdditionalParams?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
+    <contextParameter comment="" name="MySql_Connection_Database" prompt="MySql_Connection_Database?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
+    <contextParameter comment="" name="MySql_Connection_Login" prompt="MySql_Connection_Login?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
+    <contextParameter comment="" name="MySql_Connection_Password" prompt="MySql_Connection_Password?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_Password" value=""/>
+    <contextParameter comment="" name="MySql_Connection_Port" prompt="MySql_Connection_Port?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
+    <contextParameter comment="" name="MySql_Connection_Server" prompt="MySql_Connection_Server?" promptNeeded="false" repositoryContextId="_zVRq0OanEeqatZu4vyXpVQ" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="160"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="true"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:b1lV3kee+MPwVxJ7+AWAgtwyADIpSkewytMEAD/j"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/smithasj/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:inFpp1mh/tzT2+obgrJ1POiZBFUS4biEsvmxdB8n"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_67stYMnOEeqHkZz0zeIyyQ" name="DataOperation"/>
+    <routinesParameter id="_6_K4IMnOEeqHkZz0zeIyyQ" name="Mathematical"/>
+    <routinesParameter id="_6_Rl0MnOEeqHkZz0zeIyyQ" name="Numeric"/>
+    <routinesParameter id="_6_Y6kMnOEeqHkZz0zeIyyQ" name="Relational"/>
+    <routinesParameter id="_6_foQMnOEeqHkZz0zeIyyQ" name="StringHandling"/>
+    <routinesParameter id="_6_mV8MnOEeqHkZz0zeIyyQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_6_tDoMnOEeqHkZz0zeIyyQ" name="TalendDate"/>
+    <routinesParameter id="_6_0YYMnOEeqHkZz0zeIyyQ" name="TalendString"/>
+    <routinesParameter id="_6_538MnOEeqHkZz0zeIyyQ" name="TalendStringUtil"/>
+    <routinesParameter id="_7AAloMnOEeqHkZz0zeIyyQ" name="SQLike"/>
+    <routinesParameter id="_7AGFMMnOEeqHkZz0zeIyyQ" name="DataMasking"/>
+    <routinesParameter id="_7ALkwMnOEeqHkZz0zeIyyQ" name="DataQuality"/>
+    <routinesParameter id="_7ARrYMnOEeqHkZz0zeIyyQ" name="DataQualityDependencies"/>
+    <routinesParameter id="_7AXK8MnOEeqHkZz0zeIyyQ" name="DqStringHandling"/>
+    <routinesParameter id="_7AcqgMnOEeqHkZz0zeIyyQ" name="DQTechnical"/>
+    <routinesParameter id="_1MS74NcGEeqXnsDmRCCmog" name="TalendEncryption"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Indicates Start of Job"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connection to MySQL Failed!&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="6702"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;MYSQL Connection Error"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;MySQL Connection Succesful&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="3702"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Connection succesful"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;PostJob"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="LoadContext" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="LoadContext_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tPrejob_1"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_2" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_2:COMPONENT_LIST" value=""/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;CommonFramework:LoadContext"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tParallelize" componentVersion="0.101" offsetLabelX="-3" offsetLabelY="-11" posX="128" posY="672">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
+    <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
+    <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tELTMysqlMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlMap_2"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="BEZIER_CURVE"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ"/>
+    <elementParameter field="TEXT" name="HOST" value="context.MySql_Connection_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.MySql_Connection_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.MySql_Connection_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.MySql_Connection_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SZwxURp9zPm6gYZY1CympmYVQoXe8qAzu+qESH1hjt46JqXYHb5gpPyH96rFVSTzT01RCvMW7/GBmXz+CQ=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ObGTsObLEeqrE6Vj_QpYDw-tELTMysqlMap_2-PREVIEW.bmp"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.MySql_Connection_AdditionalParams"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt; Joins"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TEXT" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" show="false" value="false"/>
+    <metadata connector="TABLE" label="covid19_countrywise_test_data" name="table2">
+      <column comment="" key="false" length="10" name="Countrycode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Total_Covid_Test" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+    <nodeData xsi:type="DBMapData">
+      <InputTables joinType="NO_JOIN" name="covid19_countrycode_data" tableName="covid19_countrycode_data">
+        <DBMapperTableEntries name="CountryCode"/>
+        <DBMapperTableEntries name="Country_Region"/>
+      </InputTables>
+      <InputTables joinType="INNER_JOIN" name="covid19_tests_data" tableName="covid19_tests_data">
+        <DBMapperTableEntries expression="covid19_countrycode_data.CountryCode " join="true" name="Countrycode" operator="="/>
+        <DBMapperTableEntries name="Date"/>
+        <DBMapperTableEntries name="Total_COVID_19_Tests"/>
+      </InputTables>
+      <OutputTables name="table2" tableName="covid19_countrywise_test_data">
+        <DBMapperTableEntries expression="covid19_tests_data.Countrycode " name="Countrycode"/>
+        <DBMapperTableEntries expression="covid19_countrycode_data.Country_Region " name="Country"/>
+        <DBMapperTableEntries expression="covid19_tests_data.Date" name="Date"/>
+        <DBMapperTableEntries expression="covid19_tests_data.Total_COVID_19_Tests " name="Total_Covid_Test"/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlOutput_1"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;covid19_countrywise_test_data&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;covid19_countrywise_test_data"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="covid19_countrywise_test_data" name="tELTMysqlOutput_1">
+      <column comment="" key="false" length="10" name="Countrycode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Total_Covid_Test" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tELTMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_3"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ - covid19_countrycode_data"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;covid19_countrycode_data&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;covid19_countrycode_data"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="covid19_countrycode_data" name="tELTMysqlInput_3">
+      <column comment="" key="false" length="3" name="CountryCode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Country_Region" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tELTMysqlMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlMap_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ"/>
+    <elementParameter field="TEXT" name="HOST" value="context.MySql_Connection_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.MySql_Connection_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.MySql_Connection_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.MySql_Connection_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:b9ViNkMHVARLhF0BRxWFmXQEjn1ksx0MnJYXlgLgY9otcFwheHzyZ84HG3/IbQJXIdbautSeHMhtQqFm7Q=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ObGTsObLEeqrE6Vj_QpYDw-tELTMysqlMap_1-PREVIEW.bmp"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.MySql_Connection_AdditionalParams"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Joins and Transformation"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TEXT" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" show="false" value="false"/>
+    <metadata connector="TABLE" label="covid19_countrywise_gender_age_data" name="table1">
+      <column comment="" key="false" length="10" name="CountryCode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="As_on_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Total_Count_age_0_to_14_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Total_Count_age_15_to_64_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Total_Count_age_over_65_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="TotalMaleCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="TotalFemaleCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="TotalGenderNotDisclosedCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+    <nodeData xsi:type="DBMapData">
+      <InputTables joinType="NO_JOIN" name="covid19_countrycode_data" tableName="covid19_countrycode_data">
+        <DBMapperTableEntries name="CountryCode"/>
+        <DBMapperTableEntries name="Country_Region"/>
+      </InputTables>
+      <InputTables joinType="INNER_JOIN" name="covid19_age_gender_data" tableName="covid19_age_gender_data">
+        <DBMapperTableEntries expression="covid19_countrycode_data.CountryCode " join="true" name="CountryCode" operator="="/>
+        <DBMapperTableEntries name="Collection_center"/>
+        <DBMapperTableEntries name="As_on_date"/>
+        <DBMapperTableEntries name="MaleCount"/>
+        <DBMapperTableEntries name="FemaleCount"/>
+        <DBMapperTableEntries name="GenderNotDisclosedCount"/>
+        <DBMapperTableEntries name="Host"/>
+        <DBMapperTableEntries name="age_0_to_14_years"/>
+        <DBMapperTableEntries name="age_15_to_64_years"/>
+        <DBMapperTableEntries name="age_over_65_years"/>
+      </InputTables>
+      <OutputTables name="table1" tableName="covid19_countrywise_gender_age_data">
+        <DBMapperTableEntries expression="covid19_age_gender_data.CountryCode " name="CountryCode"/>
+        <DBMapperTableEntries expression="covid19_countrycode_data.Country_Region " name="Country"/>
+        <DBMapperTableEntries expression="covid19_age_gender_data.As_on_date " name="As_on_date"/>
+        <DBMapperTableEntries expression="sum(  covid19_age_gender_data.age_0_to_14_years )" name="Total_Count_age_0_to_14_years"/>
+        <DBMapperTableEntries expression="sum(  covid19_age_gender_data.age_15_to_64_years) " name="Total_Count_age_15_to_64_years"/>
+        <DBMapperTableEntries expression="sum(  covid19_age_gender_data.age_over_65_years) " name="Total_Count_age_over_65_years"/>
+        <DBMapperTableEntries expression="sum(  covid19_age_gender_data.MaleCount)" name="TotalMaleCount"/>
+        <DBMapperTableEntries expression="sum(  covid19_age_gender_data.FemaleCount)" name="TotalFemaleCount"/>
+        <DBMapperTableEntries expression="sum(  covid19_age_gender_data.GenderNotDisclosedCount )" name="TotalGenderNotDisclosedCount"/>
+        <FilterEntries expression="GROUP BY  covid19_countrycode_data.CountryCode,  covid19_age_gender_data.As_on_date ORDER BY  covid19_countrycode_data.Country_Region,  covid19_age_gender_data.As_on_date " filterKind="OTHER_FILTER" name="newFilter8"/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlOutput_2"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;covid19_countrywise_gender_age_data&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;covid19_countrywise_gender_age_data"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="covid19_countrywise_gender_age_data" name="tELTMysqlOutput_2">
+      <column comment="" key="false" length="10" name="CountryCode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="As_on_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Total_Count_age_0_to_14_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Total_Count_age_15_to_64_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Total_Count_age_over_65_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="TotalMaleCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="TotalFemaleCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="TotalGenderNotDisclosedCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tELTMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_2"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ - covid19_countrycode_data"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;covid19_countrycode_data&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;covid19_countrycode_data"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="covid19_countrycode_data" name="tELTMysqlInput_7">
+      <column comment="" key="false" length="3" name="CountryCode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Country_Region" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tELTMysqlInput" componentVersion="0.102" offsetLabelX="14" offsetLabelY="0" posX="576" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_4"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ - covid19_tests_data"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;covid19_tests_data&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;covid19_tests_data"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="covid19_tests_data" name="tELTMysqlInput_4">
+      <column comment="" key="false" length="10" name="Countrycode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="30" name="Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="30" name="Total_COVID_19_Tests" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tELTMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_1"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ - covid19_age_gender_data"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;covid19_age_gender_data&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;covid19_age_gender_data"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="covid19_age_gender_data" name="tELTMysqlInput_4">
+      <column comment="" key="false" length="40" name="CountryCode" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Collection_center" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="As_on_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="MaleCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="FemaleCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="GenderNotDisclosedCount" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="Host" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="age_0_to_14_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="age_15_to_64_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="age_over_65_years" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Close MySqlConnection"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_2"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;MySQL connection closed&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="3706"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Job complete"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_lafHwOajEeqatZu4vyXpVQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="TEXT" name="HOST" value="context.MySql_Connection_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.MySql_Connection_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.MySql_Connection_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.MySql_Connection_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.MySql_Connection_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:e1X5XWKo8W41JoCLsiUgJj9Cnen4tlySGSQYv0oQPlL1tEP5XfQcHupRpKh9EJbyv/Lozg6wkgK0FcLa4w=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;Connect to MySQL Database"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="LoadContext_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk4"/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (&lt;b&gt;TRIGGER_OUTPUT_1&lt;/b&gt;&lt;br&gt;OnSubjobOk(TRIGGER_OUTPUT_1))" lineStyle="1" metaname="LoadContext_1" offsetLabelX="48" offsetLabelY="-15" source="LoadContext_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="-5" offsetLabelY="-17" outputId="1" source="tParallelize_1" target="tELTMysqlMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="-5" offsetLabelY="-35" outputId="2" source="tParallelize_1" target="tELTMysqlMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+  </connection>
+  <connection connectorName="TABLE" label="covid19_countrywise_test_data" lineStyle="9" metaname="table2" offsetLabelX="23" offsetLabelY="-34" source="tELTMysqlMap_2" target="tELTMysqlOutput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="covid19_countrycode_data" lineStyle="9" metaname="tELTMysqlInput_3" offsetLabelX="50" offsetLabelY="-50" source="tELTMysqlInput_3" target="tELTMysqlMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_3"/>
+  </connection>
+  <connection connectorName="TABLE" label="covid19_countrywise_gender_age_data" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTMysqlMap_1" target="tELTMysqlOutput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="covid19_countrycode_data" lineStyle="9" metaname="tELTMysqlInput_7" offsetLabelX="50" offsetLabelY="-50" source="tELTMysqlInput_2" target="tELTMysqlMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_7"/>
+  </connection>
+  <connection connectorName="TABLE" label="covid19_tests_data" lineStyle="9" metaname="tELTMysqlInput_4" offsetLabelX="-28" offsetLabelY="-10" source="tELTMysqlInput_4" target="tELTMysqlMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_4"/>
+  </connection>
+  <connection connectorName="TABLE" label="covid19_age_gender_data" lineStyle="9" metaname="tELTMysqlInput_4" offsetLabelX="50" offsetLabelY="50" source="tELTMysqlInput_1" target="tELTMysqlMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMysqlInput_4"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBClose_1" offsetLabelX="0" offsetLabelY="0" source="tDBClose_1" target="tWarn_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
+  </connection>
+  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDie_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tWarn_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <note opaque="true" posX="96" posY="-160" sizeHeight="129" sizeWidth="801" text="Version: 1.0&#13;&#10;Description:&#13;&#10;&#13;&#10;Job for deomonstrating ELTMySql components . Use case described against the jobs&#13;&#10;">
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
+    <elementParameter field="CHECK" name="FONT_BOLD" value="true"/>
+  </note>
+  <note opaque="true" posX="1376" posY="544" sizeHeight="97" sizeWidth="321" text="Indicates join between country and &#13;&#10;country code">
+    <elementParameter field="CHECK" name="FONT_BOLD" value="true"/>
+  </note>
+  <note opaque="true" posX="1376" posY="832" sizeHeight="97" sizeWidth="385" text="Total Male,Female, NotDisclosedGender,&#13;&#10;Age counts per country per date&#13;&#10; from various collection center">
+    <elementParameter field="CHECK" name="FONT_BOLD" value="true"/>
+  </note>
+  <note opaque="true" posX="288" posY="1120" sizeHeight="64" sizeWidth="897" text="&lt;&lt;&lt;&lt; EOJ &gt;&gt;&gt;&gt;">
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
+    <elementParameter field="CHECK" name="FONT_BOLD" value="true"/>
+  </note>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="LoadContext_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Job to show Joins in ELT and calacute total covid19 gender,age of people affected per country"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c96e8824-62ad-413e-bdb6-7e11d858eb8e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nB7flgCQEbOPuKO0tYBoFODaxvhNeR2Qk6iwWTXpyAn03QYezh4SrfctRBRtFLO6OiM/W7jC5xUA
+emN6igRHBQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0ff41cf7-5734-4572-a0f8-3f89a193d2d9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cTKFlCaKAm4s4bNCA6Lg6rNg4YTVPNdnmNAf5spdVFn0t4PYpb9yjSo+FLqAqwsUVUTuu1sO+F6q
+F7ZDo80wng==</DigestValue></Reference></SignedInfo><SignatureValue>ISxmsHyZZ4MLby/3kzPkVPlU6m+Dq49QrZ9U7FDeV2jR7faU3f7UioKQMVTMhqGmSzOLzRpZl/F7
+uMLS94R6E7wC7UIlihIWHvdzbw20bDLLJeYz6CjLbmOKYVwrNj9mqBJF86PvQM8poCG7UWysTO0B
+dUDYT5IrvKDTABIBbowVdeUoQZzFT0oY5QHPqo3VIaWmgpBmWJp1p/rzzcFitzVR+5rpGrGrOxzW
+wDOvPAY/R56Ta4/GNPX9wVwph/sILMyZFc5H7szBlp+Wec1Pqp4Q9dDzQ6iQFW+qtYksRGROAI04
+RPPp44fMZ9TqrMVXuRBMLPfY1uQr1mb3t7F80Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0ff41cf7-5734-4572-a0f8-3f89a193d2d9" Target="#_c96e8824-62ad-413e-bdb6-7e11d858eb8e"><Timestamp>2020-08-25 12:35:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
