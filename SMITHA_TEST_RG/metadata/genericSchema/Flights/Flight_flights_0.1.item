@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:GenericSchemaConnection dataPackage="_lwJocZp1EeqFC4H86CdFwA" mappingTypeId="snowflake_id" mappingTypeUsed="true" xmi:id="_lwJocJp1EeqFC4H86CdFwA"/>
+  <TalendMetadata:GenericPackage dataManager="_lwJocJp1EeqFC4H86CdFwA" xmi:id="_lwJocZp1EeqFC4H86CdFwA">
+    <ownedElement id="_lwJBYJp1EeqFC4H86CdFwA" label="FLIGHTS" xmi:id="_lwJocpp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataTable">
+      <feature label="ID" length="38" name="ID" sourceType="STRING" talendType="id_String" xmi:id="_RIK-YJqiEeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="YEAR" length="4" name="YEAR" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJoc5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJodJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="MONTH" length="2" name="MONTH" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJodZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJodpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DAY" length="2" name="DAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJod5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoeJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DAY_OF_WEEK" length="2" name="DAY_OF_WEEK" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJoeZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoepp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="AIRLINE" length="38" name="AIRLINE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_lwJoe5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJofJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="FLIGHT_NUMBER" length="38" name="FLIGHT_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="STRING" talendType="id_String" xmi:id="_lwJofZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJofpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="TAIL_NUMBER" length="10" name="TAIL_NUMBER" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_lwJof5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJogJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="ORIGIN_AIRPORT" length="4" name="ORIGIN_AIRPORT" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_lwJogZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJogpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DESTINATION_AIRPORT" length="4" name="DESTINATION_AIRPORT" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_lwJog5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJohJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="SCHEDULED_DEPARTURE" length="-1" name="SCHEDULED_DEPARTURE" pattern="&quot;HHmm&quot;" sourceType="TIME" talendType="id_Date" xmi:id="_lwJohZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJohpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DEPARTURE_TIME" length="4" name="DEPARTURE_TIME" pattern="&quot;HHmm&quot;" sourceType="TIME" talendType="id_Date" xmi:id="_lwJoh5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoiJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DEPARTURE_DELAY" length="-1" name="DEPARTURE_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJoiZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoipp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="TAXI_OUT" length="-1" name="TAXI_OUT" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJoi5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJojJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="WHEELS_OFF" length="-1" name="WHEELS_OFF" pattern="&quot;HHmm&quot;" sourceType="TIME" talendType="id_Date" xmi:id="_lwJojZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJojpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="SCHEDULED_TIME" length="-1" name="SCHEDULED_TIME" pattern="&quot;HHmm&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJoj5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJokJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="ELAPSED_TIME" length="-1" name="ELAPSED_TIME" pattern="&quot;HHmm&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJokZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJokpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="AIR_TIME" length="-1" name="AIR_TIME" pattern="&quot;HHmm&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJok5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJolJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DISTANCE" length="4" name="DISTANCE" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJolZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJolpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="WHEELS_ON" length="-1" name="WHEELS_ON" pattern="&quot;HHmm&quot;" sourceType="TIME" talendType="id_Date" xmi:id="_lwJol5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJomJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="TAXI_IN" length="-1" name="TAXI_IN" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJomZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJompp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="SCHEDULED_ARRIVAL" length="-1" name="SCHEDULED_ARRIVAL" pattern="&quot;HHmm&quot;" sourceType="TIME" talendType="id_Date" xmi:id="_lwJom5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJonJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="ARRIVAL_TIME" length="-1" name="ARRIVAL_TIME" pattern="&quot;HHmm&quot;" sourceType="TIME" talendType="id_Date" xmi:id="_lwJonZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJonpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="ARRIVAL_DELAY" length="-1" name="ARRIVAL_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJon5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJooJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="DIVERTED" length="1" name="DIVERTED" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJooZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoopp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="CANCELLED" length="1" name="CANCELLED" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_lwJoo5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJopJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="CANCELLATION_REASON" length="1" name="CANCELLATION_REASON" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_lwJopZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoppp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="AIR_SYSTEM_DELAY" length="-1" name="AIR_SYSTEM_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJop5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoqJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="SECURITY_DELAY" length="-1" name="SECURITY_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJoqZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJoqpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="AIRLINE_DELAY" length="-1" name="AIRLINE_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJoq5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJorJp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="LATE_AIRCRAFT_DELAY" length="-1" name="LATE_AIRCRAFT_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJorZp1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJorpp1EeqFC4H86CdFwA"/>
+      </feature>
+      <feature label="WEATHER_DELAY" length="-1" name="WEATHER_DELAY" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INTEGER" talendType="id_Integer" xmi:id="_lwJor5p1EeqFC4H86CdFwA" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_lwJosJp1EeqFC4H86CdFwA"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ab9bfe9d-2e7f-4bd4-b90f-cbb9e2eec207"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3vPdqrrXfAq5e5SyoMkPpYzZZY6N5SDwiE2B+/zwyLhZ6XriG1DoDpeeJSS/PgOcwl3YNgndNDmM
+YPiWfFMbeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f8c68978-7345-4b37-a029-e15f6bb7b96e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NIouXQQQl1pUW5L6DWtw0vNLz9Yf7QPE72LB7SYPl/PvyAfzVdREN5anq+rxodeokcOFgPvBSguB
+kBhbWeRXyQ==</DigestValue></Reference></SignedInfo><SignatureValue>HWfrflTtwt5D5stT3eb6AnEyYMIzWsPLq5EhKSqHpRC4AVsyc5L0BGCheys9vWT/PmnWZJwVLM6V
+cKNiCoXCE99ROp/A2EvyYQ1e58IF70G0RJul24hJGkU1x9XeFygIiLM3cBxA2QMiHFYfH0eGiVQk
+V4StcKQ0xaBLqbYoMNO/MDTLFwLbsnxmOvtTwnKI8rgL42nVpvSHsjn2vTol2e+HQ5qHZ/SPe1k8
+we3JGLIssp6VYIoqTIbcOjmY9vauItJ2jq84HlXyWYOfrKVcSxLfmrZfJ5JsWFTWVN+jwBpI2PJE
+T4e9KUUarScxy1/bj1K4Achk1b9/eqspOpDXvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f8c68978-7345-4b37-a029-e15f6bb7b96e" Target="#_ab9bfe9d-2e7f-4bd4-b90f-cbb9e2eec207"><Timestamp>2020-08-25 12:44:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

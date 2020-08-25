@@ -127,6 +127,7 @@
         "show" : true,
         "field" : "TABLE",
         "name" : "DRIVER_JAR",
+        "value" : "",
         "contextMode" : false
       }, {
         "show" : true,
@@ -180,7 +181,7 @@
         "show" : true,
         "field" : "PASSWORD",
         "name" : "PASS",
-        "value" : "enc:system.encryption.key.v1:9qAvHi5YvwoCulQTl8l389ZSmXj76vhozs75v0hL",
+        "value" : "enc:system.encryption.key.v1:8Poap3C80coif1psmKVNT5phZPAJdWEJQB/fhp6b",
         "contextMode" : false
       }, {
         "show" : true,
@@ -335,6 +336,7 @@
         "show" : true,
         "field" : "TABLE",
         "name" : "DRIVER_JAR_IMPLICIT_CONTEXT",
+        "value" : "",
         "contextMode" : false
       }, {
         "show" : true,
@@ -388,7 +390,7 @@
         "show" : true,
         "field" : "PASSWORD",
         "name" : "PASS_IMPLICIT_CONTEXT",
-        "value" : "enc:system.encryption.key.v1:yu0jGyyFEkG8wSyqs4SN0vZSxbBIjR3LaIzcHEsF",
+        "value" : "enc:system.encryption.key.v1:nbReR9lLrR11tEgvopiS5EQnKbsPVQqt6o7LCB6P",
         "contextMode" : false
       }, {
         "show" : true,
