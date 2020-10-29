@@ -24,6 +24,7 @@
     <module>jobs/joblets/Common/Common/ContextManagement/loadcontextfromfile_0.1</module>
     <module>jobs/process/Common/ContextManagement/loadcontext_testjob_0.1</module>
     <module>jobs/joblets/Common/Common/ContextManagement/loadcontext_0.1</module>
+    <module>jobs/process/psslai_remote_engine_test_0.1</module>
   </modules>
   <properties>
     <signer.version>7.3.1</signer.version>
